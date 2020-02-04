@@ -42,10 +42,6 @@ window.fluidboxGhost = $.when(
     // Finds all of our
     $(targetImages.join(',')).each(function (index, el) {
       if(!$(this).parent().hasClass("kg-bookmark-thumbnail") && !$(this).hasClass("kg-bookmark-icon")){
-        console.log("adding fluidbox")
-        console.log($(this))
-        console.log(this)
-        console.log(!$(this).hasClass("kg-bookmark-icon"))
         $("<a href='" + $(this).attr('src') + "' class='zoom'></a>").insertAfter($(this));
         $(this).appendTo($(this).next("a"));
       }
